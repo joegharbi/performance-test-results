@@ -6,8 +6,6 @@ This repository contains performance testing results for various web servers and
 
 ```
 Results/
-├── output/                    # Raw JSON output files from performance tests
-│   └── [430 JSON files]      # Detailed test execution logs
 ├── results/                   # Processed CSV results organized by date
 │   ├── 2025-07-14_113305/    # Test run from July 14, 2025
 │   └── 2025-07-16_090602/    # Test run from July 16, 2025
