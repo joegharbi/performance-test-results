@@ -2,6 +2,21 @@
 
 This repository contains performance testing results for various web servers and technologies, including HTTP/HTTPS and WebSocket performance benchmarks.
 
+## Data Collection Framework
+
+These performance test results were collected using the **[Web Server Energy and Performance Benchmarking Framework](https://github.com/joegharbi/web-server-benchmarks)** - a comprehensive toolkit for evaluating the performance and energy efficiency of web servers running in Docker containers.
+
+### Energy Measurement
+
+The raw JSON data files in the `output/` directory were collected using **[Scaphandre](https://github.com/hubblo-org/scaphandre)** - a power consumption monitoring agent that provides detailed energy consumption metrics for system processes and containers.
+
+**Key Features of the Collection Framework:**
+- **Docker Container Testing**: Automated container discovery and health checks
+- **Energy Monitoring**: Real-time power consumption tracking with Scaphandre
+- **Multi-Protocol Support**: HTTP/HTTPS and WebSocket performance testing
+- **Comprehensive Metrics**: CPU, memory, energy, and performance data collection
+- **Automated Benchmarking**: Streamlined test execution and result aggregation
+
 ## Repository Structure
 
 ```
@@ -114,15 +129,17 @@ All result files are in CSV format with the following common columns:
 - Test pattern details (clients, message size, rate, bursts, intervals, duration)
 
 ### JSON Files
-Raw test execution logs containing detailed performance metrics and system information. These files provide comprehensive data for each test run including:
+Raw test execution logs containing detailed performance metrics and system information collected by **Scaphandre**. These files provide comprehensive data for each test run including:
 
-- Detailed timing information
-- System resource usage during tests
-- Complete test configuration parameters
-- Error logs and debugging information
-- Raw performance measurements before aggregation
+- **Energy Consumption Data**: Detailed power consumption metrics from Scaphandre
+- **System Resource Usage**: CPU, memory, and I/O statistics during tests
+- **Container Performance**: Docker container-specific resource utilization
+- **Test Configuration**: Complete test parameters and environment details
+- **Timing Information**: Precise execution timing and latency measurements
+- **Error Logs**: Debugging information and error tracking
 
 **File Organization:**
 - Files are timestamped (e.g., `2025-07-16-090603.json`)
-- Each file corresponds to a specific test execution
+- Each file corresponds to a specific test execution with Scaphandre monitoring
 - Total of 430 JSON files (26MB) covering all test runs
+- Data collected using the [Web Server Benchmarking Framework](https://github.com/joegharbi/web-server-benchmarks)
