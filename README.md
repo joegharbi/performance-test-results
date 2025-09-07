@@ -6,6 +6,8 @@ This repository contains performance testing results for various web servers and
 
 ```
 Results/
+├── output/                    # Raw JSON output files from performance tests
+│   └── [430 JSON files]      # Detailed test execution logs (26MB)
 ├── results/                   # Processed CSV results organized by date
 │   ├── 2025-07-14_113305/    # Test run from July 14, 2025
 │   └── 2025-07-16_090602/    # Test run from July 16, 2025
@@ -110,3 +112,17 @@ All result files are in CSV format with the following common columns:
 - Energy and Power metrics
 - CPU and Memory metrics
 - Test pattern details (clients, message size, rate, bursts, intervals, duration)
+
+### JSON Files
+Raw test execution logs containing detailed performance metrics and system information. These files provide comprehensive data for each test run including:
+
+- Detailed timing information
+- System resource usage during tests
+- Complete test configuration parameters
+- Error logs and debugging information
+- Raw performance measurements before aggregation
+
+**File Organization:**
+- Files are timestamped (e.g., `2025-07-16-090603.json`)
+- Each file corresponds to a specific test execution
+- Total of 430 JSON files (26MB) covering all test runs
